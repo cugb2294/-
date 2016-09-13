@@ -31,9 +31,10 @@ public class SubscribItemActivity extends Activity {
 		name.setText(list.get(1));
 		age.setText(list.get(2));
 		grade.setText(list.get(3));
-		experience.setText("心里拓展经验:"+list.get(4));
-		motto.setText("个人宣言:"+list.get(5));
+		experience.setText("脨脛脌茂脥脴脮鹿戮颅脩茅:"+list.get(4));
+		motto.setText("赂枚脠脣脨没脩脭:"+list.get(5));
 	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
