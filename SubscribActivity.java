@@ -28,6 +28,7 @@ public class SubscribActivity extends Activity {
 	//记录头部radiogroup的焦点
 	int currentNo=0;
 	// 拓展基本信息
+	
 	int[] img={R.drawable.tea1,R.drawable.tea2,R.drawable.tea3,R.drawable.tea4};
 	String[] name={"拓展师姓名：赵霁1","拓展师姓名：赵霁2","拓展师姓名：赵霁3","拓展师姓名：赵霁4"};
 	String[] age={"拓展师教龄：1.5年","拓展师教龄：1.5年","拓展师教龄：1.5年","拓展师教龄：1.5年"};
