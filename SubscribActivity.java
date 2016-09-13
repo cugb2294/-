@@ -25,31 +25,31 @@ public class SubscribActivity extends Activity {
 	RadioGroup rg;
 	RadioButton rb1,rb2,rb3;
 	ListView teachers;
-	//¼ÇÂ¼Í·²¿radiogroupµÄ½¹µã
+	//è®°å½•å¤´éƒ¨radiogroupçš„ç„¦ç‚¹
 	int currentNo=0;
-	// ÍØÕ¹»ù±¾ĞÅÏ¢
+	// æ‹“å±•åŸºæœ¬ä¿¡æ¯
 	int[] img={R.drawable.tea1,R.drawable.tea2,R.drawable.tea3,R.drawable.tea4};
-	String[] name={"ÍØÕ¹Ê¦ĞÕÃû£ºÕÔö«1","ÍØÕ¹Ê¦ĞÕÃû£ºÕÔö«2","ÍØÕ¹Ê¦ĞÕÃû£ºÕÔö«3","ÍØÕ¹Ê¦ĞÕÃû£ºÕÔö«4"};
-	String[] age={"ÍØÕ¹Ê¦½ÌÁä£º1.5Äê","ÍØÕ¹Ê¦½ÌÁä£º1.5Äê","ÍØÕ¹Ê¦½ÌÁä£º1.5Äê","ÍØÕ¹Ê¦½ÌÁä£º1.5Äê"};
-	String[] grade={"ÍØÕ¹Ê¦ÆÀ·Ö£º9.5·Ö","ÍØÕ¹Ê¦ÆÀ·Ö£º8.5·Ö","ÍØÕ¹Ê¦ÆÀ·Ö£º8.5·Ö","ÍØÕ¹Ê¦ÆÀ·Ö£º9.5·Ö"};
-	String[] experience={"¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦","¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦","¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦","¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦"};
-	String[] motto={"Ç±ĞÄ³ÉÄ§","Ç±ĞÄ³ÉÄ§","Ç±ĞÄ³ÉÄ§","Ç±ĞÄ³ÉÄ§"};
+	String[] name={"æ‹“å±•å¸ˆå§“åï¼šèµµéœ1","æ‹“å±•å¸ˆå§“åï¼šèµµéœ2","æ‹“å±•å¸ˆå§“åï¼šèµµéœ3","æ‹“å±•å¸ˆå§“åï¼šèµµéœ4"};
+	String[] age={"æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´","æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´","æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´","æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´"};
+	String[] grade={"æ‹“å±•å¸ˆè¯„åˆ†ï¼š9.5åˆ†","æ‹“å±•å¸ˆè¯„åˆ†ï¼š8.5åˆ†","æ‹“å±•å¸ˆè¯„åˆ†ï¼š8.5åˆ†","æ‹“å±•å¸ˆè¯„åˆ†ï¼š9.5åˆ†"};
+	String[] experience={"å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ","å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ","å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ","å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ"};
+	String[] motto={"new change","æ½œå¿ƒæˆé­”","æ½œå¿ƒæˆé­”","æ½œå¿ƒæˆé­”"};
 	
-	// É³ÅÌ»ù±¾ĞÅÏ¢
+	// æ²™ç›˜åŸºæœ¬ä¿¡æ¯
 	int[] img2={R.drawable.bo1,R.drawable.bo2,R.drawable.bo3,R.drawable.bo4};
-	String[] name2={"shapanĞÕÃû£ºÎâĞã²¨1","shapanĞÕÃû£ºÎâĞã²¨2","shapanĞÕÃû£ºÎâĞã²¨3","shapanĞÕÃû£ºÎâĞã²¨4"};
-	String[] age2={"ÍØÕ¹Ê¦½ÌÁä£º1.5Äê","ÍØÕ¹Ê¦½ÌÁä£º1.5Äê","ÍØÕ¹Ê¦½ÌÁä£º1.5Äê","ÍØÕ¹Ê¦½ÌÁä£º1.5Äê"};
-	String[] grade2={"ÍØÕ¹Ê¦ÆÀ·Ö£º9.5·Ö","ÍØÕ¹Ê¦ÆÀ·Ö£º8.5·Ö","ÍØÕ¹Ê¦ÆÀ·Ö£º8.5·Ö","ÍØÕ¹Ê¦ÆÀ·Ö£º9.5·Ö"};
-	String[] experience2={"¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦","¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦","¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦","¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦"};
-	String[] motto2={"Ç±ĞÄ³ÉÄ§","Ç±ĞÄ³ÉÄ§","Ç±ĞÄ³ÉÄ§","Ç±ĞÄ³ÉÄ§"};
-	// ĞÄÀí×ÉÑ¯»ù±¾ĞÅÏ¢
+	String[] name2={"shapanå§“åï¼šå´ç§€æ³¢1","shapanå§“åï¼šå´ç§€æ³¢2","shapanå§“åï¼šå´ç§€æ³¢3","shapanå§“åï¼šå´ç§€æ³¢4"};
+	String[] age2={"æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´","æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´","æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´","æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´"};
+	String[] grade2={"æ‹“å±•å¸ˆè¯„åˆ†ï¼š9.5åˆ†","æ‹“å±•å¸ˆè¯„åˆ†ï¼š8.5åˆ†","æ‹“å±•å¸ˆè¯„åˆ†ï¼š8.5åˆ†","æ‹“å±•å¸ˆè¯„åˆ†ï¼š9.5åˆ†"};
+	String[] experience2={"å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ","å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ","å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ","å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ"};
+	String[] motto2={"æ½œå¿ƒæˆé­”","æ½œå¿ƒæˆé­”","æ½œå¿ƒæˆé­”","æ½œå¿ƒæˆé­”"};
+	// å¿ƒç†å’¨è¯¢åŸºæœ¬ä¿¡æ¯
 	int[] img3={R.drawable.mo1,R.drawable.mo2,R.drawable.mo3,R.drawable.mo4};
-	String[] name3={"ĞÄÀí×ÉÑ¯Ê¦ĞÕÃû£ºÄ§×ğ1","ĞÄÀí×ÉÑ¯Ê¦ĞÕÃû£ºÄ§×ğ2","ĞÄÀí×ÉÑ¯Ê¦ĞÕÃû£ºÄ§×ğ3","ĞÄÀí×ÉÑ¯Ê¦ĞÕÃû£ºÄ§×ğ4"};
-	String[] age3={"ÍØÕ¹Ê¦½ÌÁä£º1.5Äê","ÍØÕ¹Ê¦½ÌÁä£º1.5Äê","ÍØÕ¹Ê¦½ÌÁä£º1.5Äê","ÍØÕ¹Ê¦½ÌÁä£º1.5Äê"};
-	String[] grade3={"ÍØÕ¹Ê¦ÆÀ·Ö£º9.5·Ö","ÍØÕ¹Ê¦ÆÀ·Ö£º8.5·Ö","ÍØÕ¹Ê¦ÆÀ·Ö£º8.5·Ö","ÍØÕ¹Ê¦ÆÀ·Ö£º9.5·Ö"};
-	String[] experience3={"¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦","¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦","¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦","¹ú¼ÒÒÔ¼°ĞÄÀí¸¨µ¼Ê¦"};
-	String[] motto3={"Ç±ĞÄ³ÉÄ§","Ç±ĞÄ³ÉÄ§","Ç±ĞÄ³ÉÄ§","Ç±ĞÄ³ÉÄ§"};
-	// ¼ÇÂ¼½ÌÊ¦ĞÅÏ¢
+	String[] name3={"å¿ƒç†å’¨è¯¢å¸ˆå§“åï¼šé­”å°Š1","å¿ƒç†å’¨è¯¢å¸ˆå§“åï¼šé­”å°Š2","å¿ƒç†å’¨è¯¢å¸ˆå§“åï¼šé­”å°Š3","å¿ƒç†å’¨è¯¢å¸ˆå§“åï¼šé­”å°Š4"};
+	String[] age3={"æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´","æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´","æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´","æ‹“å±•å¸ˆæ•™é¾„ï¼š1.5å¹´"};
+	String[] grade3={"æ‹“å±•å¸ˆè¯„åˆ†ï¼š9.5åˆ†","æ‹“å±•å¸ˆè¯„åˆ†ï¼š8.5åˆ†","æ‹“å±•å¸ˆè¯„åˆ†ï¼š8.5åˆ†","æ‹“å±•å¸ˆè¯„åˆ†ï¼š9.5åˆ†"};
+	String[] experience3={"å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ","å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ","å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ","å›½å®¶ä»¥åŠå¿ƒç†è¾…å¯¼å¸ˆ"};
+	String[] motto3={"æ½œå¿ƒæˆé­”","æ½œå¿ƒæˆé­”","æ½œå¿ƒæˆé­”","æ½œå¿ƒæˆé­”"};
+	// è®°å½•æ•™å¸ˆä¿¡æ¯
 	List<Map<String,Object>> content=new ArrayList<Map<String,Object>>();
 	List<Map<String,Object>> content2=new ArrayList<Map<String,Object>>();
 	List<Map<String,Object>> content3=new ArrayList<Map<String,Object>>();
@@ -63,7 +63,7 @@ public class SubscribActivity extends Activity {
 		rb2=(RadioButton)findViewById(R.id.sub_rb2);
 		rb3=(RadioButton)findViewById(R.id.sub_rb3);
 		rb1.setBackgroundColor(Color.CYAN);
-		// ¼ÓÔØÊı¾İµ½¼¯ºÏ¶ÔÏóÖĞ
+		// åŠ è½½æ•°æ®åˆ°é›†åˆå¯¹è±¡ä¸­
 		for(int i=0;i<img.length;i++){
 			Map<String,Object> map=new HashMap<String, Object>();
 			map.put("img",img[i]);
@@ -84,11 +84,11 @@ public class SubscribActivity extends Activity {
 			map3.put("grade", grade3[i]);
 			content3.add(map3);
 		}
-		// ´´½¨Ğ¯´ø²»Í¬Êı¾İµÄÊÊÅäÆ÷
+		// åˆ›å»ºæºå¸¦ä¸åŒæ•°æ®çš„é€‚é…å™¨
 		final SimpleAdapter adapter=new SimpleAdapter(this, content, R.layout.subsitems, new String[]{"img","name","age","grade"}, new int[]{R.id.subsimg,R.id.subsname,R.id.subsage,R.id.subsgrade});
 		final SimpleAdapter adapter2=new SimpleAdapter(this, content2, R.layout.subsitems, new String[]{"img","name","age","grade"}, new int[]{R.id.subsimg,R.id.subsname,R.id.subsage,R.id.subsgrade});
 		final SimpleAdapter adapter3=new SimpleAdapter(this, content3, R.layout.subsitems, new String[]{"img","name","age","grade"}, new int[]{R.id.subsimg,R.id.subsname,R.id.subsage,R.id.subsgrade});
-		// ÉèÖÃÍ·²¿ ·ÖÀàradiogroupµÄ½¹µã¸Ä±äÊÂ¼ş
+		// è®¾ç½®å¤´éƒ¨ åˆ†ç±»radiogroupçš„ç„¦ç‚¹æ”¹å˜äº‹ä»¶
 		rg.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			
 			@Override
@@ -132,9 +132,9 @@ public class SubscribActivity extends Activity {
 				}
 			}
 		});
-		// Ä¬ÈÏ¿ªÊ¼Ê±ÏÔÊ¾ÍØÕ¹ÀÏÊ¦ĞÅÏ¢
+		// é»˜è®¤å¼€å§‹æ—¶æ˜¾ç¤ºæ‹“å±•è€å¸ˆä¿¡æ¯
 		teachers.setAdapter(adapter);
-		// ÉèÖÃlistViewµÄitemµã»÷ÊÂ¼ş
+		// è®¾ç½®listViewçš„itemç‚¹å‡»äº‹ä»¶
 		teachers.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -142,7 +142,7 @@ public class SubscribActivity extends Activity {
 					long arg3) {
 				Intent in = new Intent(SubscribActivity.this,SubscribItemActivity.class);
 				ArrayList<String> list=new ArrayList<String>();
-				// ¸ù¾İµã»÷µÄĞòºÅ´«µİ²»Í¬µÄÊı¾İ
+				// æ ¹æ®ç‚¹å‡»çš„åºå·ä¼ é€’ä¸åŒçš„æ•°æ®
 				switch (currentNo){
 				case 0:
 					list.add(img[arg2]+"");
