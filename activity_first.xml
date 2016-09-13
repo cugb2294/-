@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IndexActivity" >
+
+<ImageView 
+        android:id="@+id/loginreg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/theme1"/>
+    <TextView 
+        android:id="@+id/indexusername"
+        android:layout_toRightOf="@+id/loginreg"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="UserName:K_Candid"
+        />
+    <ImageView 
+        android:id="@+id/indexad"
+                android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginreg"
+        android:src="@drawable/ad1"/>
+
+    <GridView 
+        android:id="@+id/indexgv"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_below="@+id/indexad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"></GridView>
+
+</RelativeLayout>

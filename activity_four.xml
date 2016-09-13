@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@drawable/bg"
+    tools:context=".MineActivity" >
+
+   <ImageView 
+    android:id="@+id/userImg"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:src="@drawable/theme"/>
+<TextView 
+    android:id="@+id/userName"
+    android:layout_below="@+id/userImg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:text="K_Candid"
+    android:textColor="#fff"
+    />
+<TextView 
+    android:id="@+id/showPrev"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/userName"
+    android:layout_marginTop="20dp"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:background="#fff"
+    android:text="  查 看 所 有 预 约 "
+    />
+<ListView 
+    android:id="@+id/listview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/showPrev"
+    android:layout_marginTop="30dp"
+    android:entries="@array/funcmine"
+    android:background="#fff"
+    ></ListView>
+
+</RelativeLayout>

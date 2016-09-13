@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubscribActivity" >
+<TextView
+    android:id="@+id/subscribe"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#11BCFF"
+    android:textSize="20sp"
+    android:layout_centerHorizontal="true"
+    android:text="活动预约"></TextView>
+<ImageView 
+    android:id="@+id/userimg"
+    android:layout_width="50px"
+    android:layout_height="50px"
+    android:src="@drawable/item"/>
+
+ <RadioGroup 
+     android:id="@+id/physrg"
+     android:layout_below="@+id/subscribe"
+     android:layout_marginTop="20px"
+     android:layout_marginLeft="20px"
+     android:layout_marginRight="20px"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+
+     android:orientation="horizontal">
+      <RadioButton 
+          android:id="@+id/sub_rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="#938E96"
+            android:text="拓展"
+
+            android:textSize="18sp"/>
+        
+          <RadioButton 
+              android:id="@+id/sub_rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="#938E96"
+            android:text="沙盘"
+            android:textSize="18sp"/>
+          
+            <RadioButton 
+                android:id="@+id/sub_rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="#938E96"
+            android:text="心理咨询"
+            android:textSize="18sp"/>
+     
+ </RadioGroup>
+<ListView 
+    android:id="@+id/subslv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20px"
+    android:layout_marginRight="20px"
+    android:layout_below="@+id/physrg"></ListView>
+</RelativeLayout>
